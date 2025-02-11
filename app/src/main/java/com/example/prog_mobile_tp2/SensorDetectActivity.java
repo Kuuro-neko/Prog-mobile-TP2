@@ -109,7 +109,7 @@ public class SensorDetectActivity extends MenuActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_capteur_liste);
+        setContentView(R.layout.activity_sensor_list);
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 

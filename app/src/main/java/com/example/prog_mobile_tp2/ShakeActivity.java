@@ -41,7 +41,7 @@ public class ShakeActivity extends MenuActivity implements SensorEventListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_secouer);
+        setContentView(R.layout.activity_shake);
 
         accelerometer_x = findViewById(R.id.accelerometer_x);
         accelerometer_y = findViewById(R.id.accelerometer_y);

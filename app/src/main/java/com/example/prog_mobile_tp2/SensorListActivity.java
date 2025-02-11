@@ -21,11 +21,11 @@ public class SensorListActivity extends MenuActivity {
         List<Sensor> sensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
         StringBuilder sensorDesc = new StringBuilder();
         sensorDesc.append("Number of sensors: ").append(sensors.size()).append("\r\n\n");
-        sensorDesc.append("List of sensors that are not available on this device: \r\n\n");
+        sensorDesc.append("List of sensors that are available on this device: \r\n\n");
         for (Sensor sensor : sensors) {
             sensorDesc.append("New sensor detected : \r\n");
             sensorDesc.append("\tName: ").append(sensor.getName()).append("\r\n");
-            sensorDesc.append("\tType: ").append(getType(sensor.getType())).append("\r\n");
+            sensorDesc.append("\tType: ").append(sensor.getType()).append("\r\n");
             sensorDesc.append("Version: ").append(sensor.getVersion()).append("\r\n");
             sensorDesc.append("Resolution (in the sensor unit): ").append(sensor.getResolution()).append("\r\n");
             sensorDesc.append("Power in mA used by this sensor while in use").append(sensor.getPower()).append("\r\n");
@@ -39,7 +39,7 @@ public class SensorListActivity extends MenuActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_capteur_liste);
+        setContentView(R.layout.activity_sensor_list);
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 

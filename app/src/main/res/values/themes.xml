@@ -3,6 +3,8 @@
     <style name="Base.Theme.ProgmobileTP2" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">?attr/actionBarSize</item>
     </style>
 
     <style name="Theme.ProgmobileTP2" parent="Base.Theme.ProgmobileTP2" />

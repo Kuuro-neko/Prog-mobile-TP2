@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Prog-mobile-TP2</string>
+    <string name="label_liste_capteurs">Liste des capteurs</string>
+    <string name="label_detection_capteurs">Détection des capteurs</string>
 </resources>

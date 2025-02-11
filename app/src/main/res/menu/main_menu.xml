@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_liste_capteurs"
+        android:title="@string/label_liste_capteurs"/>
+    <item
+        android:id="@+id/menu_detection_capteurs"
+        android:title="@string/label_detection_capteurs"/>
+</menu>

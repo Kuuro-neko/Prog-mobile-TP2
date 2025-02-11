@@ -17,8 +17,8 @@ public class MenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTitle(R.string.app_name);
         super.onCreate(savedInstanceState);
+        setTitle(R.string.app_name);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_menu);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

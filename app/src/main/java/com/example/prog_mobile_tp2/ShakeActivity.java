@@ -11,10 +11,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -30,7 +28,7 @@ public class ShakeActivity extends MenuActivity implements SensorEventListener {
     private TextView accelerometer_x;
     private TextView accelerometer_y;
     private TextView accelerometer_z;
-    private TextView error;
+    private TextView message;
     private final float EPSILON_MAX = 30.f;
     private final float EPSILON_MIN = 5.f;
     private float epsilon = EPSILON_MIN + (EPSILON_MAX - EPSILON_MIN) * 20.f / 100.f;
@@ -49,7 +47,8 @@ public class ShakeActivity extends MenuActivity implements SensorEventListener {
         accelerometer_y = findViewById(R.id.accelerometer_y);
         accelerometer_z = findViewById(R.id.accelerometer_z);
         SeekBar sensitivity = findViewById(R.id.sensitivity);
-        error = findViewById(R.id.error);
+        message = findViewById(R.id.message);
+        message.setText("Flashlight is off");
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
@@ -59,7 +58,7 @@ public class ShakeActivity extends MenuActivity implements SensorEventListener {
         try {
             cameraManager.setTorchMode(cameraManager.getCameraIdList()[0], false);
         } catch (CameraAccessException e) {
-            error.setText("Error: " + e.getMessage());
+            message.setText("Error: " + e.getMessage());
         }
 
         cameraManager.registerTorchCallback(new CameraManager.TorchCallback() {
@@ -90,6 +89,11 @@ public class ShakeActivity extends MenuActivity implements SensorEventListener {
 
     private void onTorchChanged(boolean enabled) {
         torch = enabled;
+        if (enabled) {
+            message.setText("Flashlight is on");
+        } else {
+            message.setText("Flashlight is off");
+        }
     }
 
     private void onAcceleroMeterChanged(SensorEvent event) {
@@ -103,7 +107,7 @@ public class ShakeActivity extends MenuActivity implements SensorEventListener {
                 String cameraId = cameraManager.getCameraIdList()[0];
                 cameraManager.setTorchMode(cameraId, !torch);
             } catch (CameraAccessException e) {
-                error.setText("Error: " + e.getMessage());
+                message.setText("Error: " + e.getMessage());
             }
             handler.postDelayed(() -> shaking = false, COOLDOWN);
         }

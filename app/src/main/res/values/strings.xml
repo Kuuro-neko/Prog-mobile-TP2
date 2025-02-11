@@ -2,4 +2,9 @@
     <string name="app_name">Prog-mobile-TP2</string>
     <string name="label_liste_capteurs">Liste des capteurs</string>
     <string name="label_detection_capteurs">Détection des capteurs</string>
+    <string name="label_accelerometre">Accéléromètre</string>
+    <string name="label_direction">Direction</string>
+    <string name="label_secouer">Secouer</string>
+    <string name="label_proximite">Proximité</string>
+    <string name="label_geolocalisation">Géolocalisation</string>
 </resources>

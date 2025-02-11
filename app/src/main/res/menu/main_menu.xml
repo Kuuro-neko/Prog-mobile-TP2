@@ -6,4 +6,19 @@
     <item
         android:id="@+id/menu_detection_capteurs"
         android:title="@string/label_detection_capteurs"/>
+    <item
+        android:id="@+id/menu_accelerometre"
+        android:title="@string/label_accelerometre"/>
+    <item
+        android:id="@+id/menu_direction"
+        android:title="@string/label_direction"/>
+    <item
+        android:id="@+id/menu_secouer"
+        android:title="@string/label_secouer"/>
+    <item
+        android:id="@+id/menu_proximite"
+        android:title="@string/label_proximite"/>
+    <item
+        android:id="@+id/menu_geolocalisation"
+        android:title="@string/label_geolocalisation"/>
 </menu>

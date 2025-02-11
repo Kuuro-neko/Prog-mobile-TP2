@@ -39,11 +39,11 @@ public class MenuActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.menu_liste_capteurs) {
-            Intent intent = new Intent(this, CapteurListActivity.class);
+            Intent intent = new Intent(this, SensorListActivity.class);
             startActivity(intent);
             return true;
         } else if (id == R.id.menu_detection_capteurs) {
-            Intent intent = new Intent(this, CapteurDetectionActivity.class);
+            Intent intent = new Intent(this, SensorDetectActivity.class);
             startActivity(intent);
             return true;
         } else {

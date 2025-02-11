@@ -7,7 +7,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.core.graphics.Insets;
@@ -16,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.List;
 
-public class CapteurDetectionActivity extends MenuActivity {
+public class SensorDetectActivity extends MenuActivity {
     SensorManager sensorManager;
 
     public String getSensorTypeString(int sensorType) {

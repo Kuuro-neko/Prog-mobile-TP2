@@ -7,4 +7,6 @@
     <string name="label_secouer">Secouer</string>
     <string name="label_proximite">Proximité</string>
     <string name="label_geolocalisation">Géolocalisation</string>
+    <string name="lights_on">Lumière allumée</string>
+    <string name="lights_off">Lumière éteinte</string>
 </resources>

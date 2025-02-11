@@ -48,7 +48,7 @@ public class ShakeActivity extends MenuActivity implements SensorEventListener {
         accelerometer_z = findViewById(R.id.accelerometer_z);
         SeekBar sensitivity = findViewById(R.id.sensitivity);
         message = findViewById(R.id.message);
-        message.setText("Flashlight is off");
+        message.setText(getText(R.string.lights_off ));
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
@@ -90,9 +90,9 @@ public class ShakeActivity extends MenuActivity implements SensorEventListener {
     private void onTorchChanged(boolean enabled) {
         torch = enabled;
         if (enabled) {
-            message.setText("Flashlight is on");
+            message.setText(getText(R.string.lights_on));
         } else {
-            message.setText("Flashlight is off");
+            message.setText(getText(R.string.lights_off));
         }
     }
 

@@ -46,6 +46,26 @@ public class MenuActivity extends AppCompatActivity {
             Intent intent = new Intent(this, SensorDetectActivity.class);
             startActivity(intent);
             return true;
+        } else if (id == R.id.menu_accelerometre) {
+            Intent intent = new Intent(this, AccelerometerActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.menu_direction) {
+            Intent intent = new Intent(this, DirectionActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.menu_secouer) {
+            Intent intent = new Intent(this, ShakeActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.menu_proximite) {
+            Intent intent = new Intent(this, ProximityActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.menu_geolocalisation) {
+            Intent intent = new Intent(this, GeolocalizationActivity.class);
+            startActivity(intent);
+            return true;
         } else {
             return super.onOptionsItemSelected(item);
         }

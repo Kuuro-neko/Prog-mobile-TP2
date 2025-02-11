@@ -16,7 +16,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class DirectionActivity extends MenuActivity  implements SensorEventListener {
+public class DirectionActivity extends MenuActivity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor sensor;
     private TextView accelerometer_x;

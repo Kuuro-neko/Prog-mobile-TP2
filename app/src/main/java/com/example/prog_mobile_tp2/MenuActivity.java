@@ -66,6 +66,10 @@ public class MenuActivity extends AppCompatActivity {
             Intent intent = new Intent(this, GeolocalizationActivity.class);
             startActivity(intent);
             return true;
+        } else if (id == R.id.menu_country_select) {
+            Intent intent = new Intent(this, CountrySelectActivity.class);
+            startActivity(intent);
+            return true;
         } else {
             return super.onOptionsItemSelected(item);
         }

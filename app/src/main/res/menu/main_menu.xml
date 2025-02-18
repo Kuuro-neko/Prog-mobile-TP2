@@ -21,4 +21,7 @@
     <item
         android:id="@+id/menu_geolocalisation"
         android:title="@string/label_geolocalisation"/>
+    <item
+        android:id="@+id/menu_country_select"
+        android:title="@string/label_country_select"/>
 </menu>

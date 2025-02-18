@@ -9,4 +9,9 @@
     <string name="label_geolocalisation">Géolocalisation</string>
     <string name="lights_on">Lumière allumée</string>
     <string name="lights_off">Lumière éteinte</string>
+    <string name="position">Position :</string>
+    <string name="refresh_position">Rafraîchir la position</string>
+    <string name="latitude">Latitude :</string>
+    <string name="longitude">Longitude :</string>
+    <string name="no_location">Position non trouvée</string>
 </resources>

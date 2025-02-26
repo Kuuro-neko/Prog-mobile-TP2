@@ -6,7 +6,7 @@
         <area>551695</area>
         <population>67076000</population>
         <currency>Euro</currency>
-        <language>French</language>
+        <language>Français</language>
         <flag>🇫🇷</flag>
     </country>
     <country>
@@ -15,43 +15,43 @@
         <area>357022</area>
         <population>83190556</population>
         <currency>Euro</currency>
-        <language>German</language>
+        <language>Allemand</language>
         <flag>🇩🇪</flag>
     </country>
     <country>
-        <name>Italy</name>
+        <name>Italie</name>
         <capital>Rome</capital>
         <area>301340</area>
         <population>60589445</population>
         <currency>Euro</currency>
-        <language>Italian</language>
+        <language>Italien</language>
         <flag>🇮🇹</flag>
     </country>
     <country>
-        <name>Spain</name>
+        <name>Espagne</name>
         <capital>Madrid</capital>
         <area>505992</area>
         <population>46733038</population>
         <currency>Euro</currency>
-        <language>Spanish</language>
+        <language>Espagnol</language>
         <flag>🇪🇸</flag>
     </country>
     <country>
         <name>Portugal</name>
-        <capital>Lisbon</capital>
+        <capital>Lisbonne</capital>
         <area>92212</area>
         <population>10295909</population>
         <currency>Euro</currency>
-        <language>Portuguese</language>
+        <language>Portugais</language>
         <flag>🇵🇹</flag>
     </country>
     <country>
-        <name>United Kingdom</name>
-        <capital>London</capital>
+        <name>Royaume uni</name>
+        <capital>Londres</capital>
         <area>243610</area>
         <population>66435600</population>
-        <currency>Pound sterling</currency>
-        <language>English</language>
+        <currency>Livre sterling</currency>
+        <language>Anglais</language>
         <flag>🇬🇧</flag>
     </country>
     <country>
@@ -59,35 +59,35 @@
         <capital>Ottawa</capital>
         <area>9984670</area>
         <population>37589262</population>
-        <currency>Canadian dollar</currency>
-        <language>English</language>
+        <currency>Dollar canadien</currency>
+        <language>Anglais</language>
         <flag>🇨🇦</flag>
     </country>
     <country>
-        <name>United States</name>
+        <name>Etats unis</name>
         <capital>Washington</capital>
         <area>9833517</area>
         <population>327167434</population>
-        <currency>US dollar</currency>
-        <language>English</language>
+        <currency>Dollar américain</currency>
+        <language>Anglais</language>
         <flag>🇺🇸</flag>
     </country>
     <country>
-        <name>China</name>
+        <name>Chine</name>
         <capital>Beijing</capital>
         <area>9596960</area>
         <population>1392730000</population>
         <currency>Yuan</currency>
-        <language>Chinese</language>
+        <language>Chinois</language>
         <flag>🇨🇳</flag>
     </country>
     <country>
-        <name>Japan</name>
+        <name>Japon</name>
         <capital>Tokyo</capital>
         <area>377975</area>
         <population>126529100</population>
         <currency>Yen</currency>
-        <language>Japanese</language>
+        <language>Japonais</language>
         <flag>🇯🇵</flag>
     </country>
 </resources>

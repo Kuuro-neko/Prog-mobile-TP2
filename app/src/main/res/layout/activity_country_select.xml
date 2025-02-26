@@ -31,6 +31,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:fitsSystemWindows="true"
             android:id="@+id/country_list"/>
 
 

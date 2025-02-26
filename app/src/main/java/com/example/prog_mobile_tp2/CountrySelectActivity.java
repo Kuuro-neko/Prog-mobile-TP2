@@ -2,13 +2,19 @@ package com.example.prog_mobile_tp2;
 
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -20,8 +26,7 @@ import java.util.ArrayList;
 
 public class CountrySelectActivity extends MenuActivity {
     private RecyclerView recyclerView;
-
-    public class Country {
+    public static class Country {
         public String name;
         public String capital;
         public int area;
@@ -38,17 +43,22 @@ public class CountrySelectActivity extends MenuActivity {
         setContentView(R.layout.activity_country_select);
 
         recyclerView = findViewById(R.id.country_list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         ArrayList<Country> countries = readData();
 
-        String[] countryNames = new String[countries.size()];
-        for (int i = 0; i < countries.size(); i++) {
-            countryNames[i] = countries.get(i).name;
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, countryNames);
+//        String[] countryNames = new String[countries.size()];
+//        for (int i = 0; i < countries.size(); i++) {
+//            countryNames[i] = countries.get(i).name;
+//        }
+//
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, countryNames);
 
        // recyclerView.setAdapter(adapter);
+        CountryAdapter adapter = new CountryAdapter(countries);
+        recyclerView.setAdapter(adapter);
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

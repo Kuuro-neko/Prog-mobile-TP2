@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryViewHolder> {
-    private ArrayList<CountrySelectActivity.Country> countries;
+    private ArrayList<Country> countries;
 
-    public CountryAdapter(ArrayList<CountrySelectActivity.Country> countries) {
+    public CountryAdapter(ArrayList<Country> countries) {
         this.countries = countries;
     }
 
@@ -26,10 +26,10 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
     @Override
     public void onBindViewHolder(@NonNull CountryViewHolder holder, int position) {
-        CountrySelectActivity.Country country = countries.get(position);
-        holder.nameTextView.setText(country.name);
-        holder.capitalTextView.setText(country.capital);
-        holder.flagTextView.setText(country.flag);
+        Country country = countries.get(position);
+        holder.nameTextView.setText(country.getName());
+        holder.capitalTextView.setText(country.getCapital());
+        holder.flagTextView.setText(country.getFlag());
     }
 
     @Override

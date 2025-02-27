@@ -26,15 +26,7 @@ import java.util.ArrayList;
 
 public class CountrySelectActivity extends MenuActivity {
     private RecyclerView recyclerView;
-    public static class Country {
-        public String name;
-        public String capital;
-        public int area;
-        public int population;
-        public String currency;
-        public String language;
-        public String flag;
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,25 +75,25 @@ public class CountrySelectActivity extends MenuActivity {
                         } else if (country != null) {
                             switch (tagName) {
                                 case "name":
-                                    country.name = parser.nextText();
+                                    country.setName(parser.nextText());
                                     break;
                                 case "capital":
-                                    country.capital = parser.nextText();
+                                    country.setCapital(parser.nextText());
                                     break;
                                 case "area":
-                                    country.area = Integer.parseInt(parser.nextText());
+                                    country.setArea(Integer.parseInt(parser.nextText()));
                                     break;
                                 case "population":
-                                    country.population = Integer.parseInt(parser.nextText());
+                                    country.setPopulation(Integer.parseInt(parser.nextText()));
                                     break;
                                 case "currency":
-                                    country.currency = parser.nextText();
+                                    country.setCurrency(parser.nextText());
                                     break;
                                 case "language":
-                                    country.language = parser.nextText();
+                                    country.setLanguage(parser.nextText());
                                     break;
                                 case "flag":
-                                    country.flag = parser.nextText();
+                                    country.setFlag(parser.nextText());
                                     break;
                             }
                         }
@@ -118,7 +110,7 @@ public class CountrySelectActivity extends MenuActivity {
             e.printStackTrace();
         }
         for (Country country : countries) {
-            System.out.println(country.name);
+            System.out.println(country.getName());
         }
         return countries;
     }

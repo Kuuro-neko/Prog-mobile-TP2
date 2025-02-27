@@ -5,6 +5,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -17,6 +18,7 @@ public class ProximityActivity extends MenuActivity implements SensorEventListen
     private SensorManager sensorManager;
     private Sensor sensor;
     TextView proximity_value;
+    ImageView proximity_image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class ProximityActivity extends MenuActivity implements SensorEventListen
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
         proximity_value = findViewById(R.id.proximity_value);
+        proximity_image = findViewById(R.id.proximity_image);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -39,6 +42,11 @@ public class ProximityActivity extends MenuActivity implements SensorEventListen
     private void onProximityChanged(SensorEvent event) {
         float distance = event.values[0];
         proximity_value.setText(String.format("%.2f cm", distance));
+        if (distance < sensor.getMaximumRange()) {
+            proximity_image.setImageResource(R.drawable.close);
+        } else {
+            proximity_image.setImageResource(R.drawable.far);
+        }
     }
 
     @Override

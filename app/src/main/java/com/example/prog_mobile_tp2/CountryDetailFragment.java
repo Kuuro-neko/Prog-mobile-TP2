@@ -1,5 +1,6 @@
 package com.example.prog_mobile_tp2;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class CountryDetailFragment extends Fragment {
@@ -22,6 +24,18 @@ public class CountryDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_country_detail, container, false);
+
+        Button returnButton = view.findViewById(R.id.return_button);
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            // Show button in portrait mode
+            returnButton.setVisibility(View.VISIBLE);
+            returnButton.setOnClickListener(v -> {
+                requireActivity().getSupportFragmentManager().popBackStack();
+            });
+        } else {
+            // Hide button in landscape mode
+            returnButton.setVisibility(View.GONE);
+        }
 
         nameTextView = view.findViewById(R.id.country_name);
         capitalTextView = view.findViewById(R.id.country_capital);

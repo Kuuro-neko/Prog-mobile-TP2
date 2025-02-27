@@ -70,6 +70,10 @@ public class MenuActivity extends AppCompatActivity {
             Intent intent = new Intent(this, CountrySelectActivity.class);
             startActivity(intent);
             return true;
+        } else if (id == R.id.menu_country_select_fragment) {
+            Intent intent = new Intent(this, CountryActivity.class);
+            startActivity(intent);
+            return true;
         } else {
             return super.onOptionsItemSelected(item);
         }

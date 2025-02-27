@@ -24,4 +24,7 @@
     <item
         android:id="@+id/menu_country_select"
         android:title="@string/label_country_select"/>
+    <item
+        android:id="@+id/menu_country_select_fragment"
+        android:title="@string/label_country_select_fragment"/>
 </menu>

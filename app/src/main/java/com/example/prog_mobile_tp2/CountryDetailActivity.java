@@ -22,12 +22,17 @@ public class CountryDetailActivity extends MenuActivity {
             return insets;
         });
 
-
-        // Get the country from the intent
+        // Get the country from the intent's extra
         String countryName = getIntent().getStringExtra("country");
+        updateCountry(countryName);
+    }
+
+    public void updateCountry(String countryName) {
         Country country = Country.getCountryByName(getResources().getXml(R.xml.countries), countryName);
 
-        assert country != null;
+        if (country == null) {
+            return;
+        }
 
         TextView nameTextView = findViewById(R.id.country_name);
         TextView capitalTextView = findViewById(R.id.country_capital);
@@ -44,6 +49,5 @@ public class CountryDetailActivity extends MenuActivity {
         currencyTextView.setText(country.getCurrency());
         languageTextView.setText(country.getLanguage());
         flagTextView.setText(country.getFlag());
-
     }
 }

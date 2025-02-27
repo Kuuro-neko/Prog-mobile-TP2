@@ -24,9 +24,7 @@
             android:layout_height="wrap_content"
             android:text="Choisissez un pays"
             android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="wrap_content"

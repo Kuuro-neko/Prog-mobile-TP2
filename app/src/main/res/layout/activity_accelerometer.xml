@@ -26,9 +26,7 @@
             android:text="Accéléromètre"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/accelerometer_x"
@@ -36,9 +34,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="@color/black"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/accelerometer_y"
@@ -46,9 +42,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="@color/black"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/accelerometer_z"
@@ -56,9 +50,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="@color/black"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 

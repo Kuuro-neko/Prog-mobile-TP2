@@ -12,9 +12,15 @@ import java.util.ArrayList;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryViewHolder> {
     private ArrayList<Country> countries;
+    private OnCountryClickListener listener;
 
-    public CountryAdapter(ArrayList<Country> countries) {
+    public interface OnCountryClickListener {
+        void onCountryClick(Country country);
+    }
+
+    public CountryAdapter(ArrayList<Country> countries, OnCountryClickListener listener) {
         this.countries = countries;
+        this.listener = listener;
     }
 
     @NonNull
@@ -28,8 +34,8 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
     public void onBindViewHolder(@NonNull CountryViewHolder holder, int position) {
         Country country = countries.get(position);
         holder.nameTextView.setText(country.getName());
-        holder.capitalTextView.setText(country.getCapital());
         holder.flagTextView.setText(country.getFlag());
+        holder.itemView.setOnClickListener(v -> listener.onCountryClick(country));
     }
 
     @Override
@@ -39,13 +45,11 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryV
 
     public static class CountryViewHolder extends RecyclerView.ViewHolder {
         TextView nameTextView;
-        TextView capitalTextView;
         TextView flagTextView;
 
         public CountryViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.country_name);
-            capitalTextView = itemView.findViewById(R.id.country_capital);
             flagTextView = itemView.findViewById(R.id.country_flag);
         }
     }

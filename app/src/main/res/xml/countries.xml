@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Données sur les pays générées par IA donc probablement pas exactes -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <country>
         <name>France</name>
@@ -89,5 +90,113 @@
         <currency>Yen</currency>
         <language>Japonais</language>
         <flag>🇯🇵</flag>
+    </country>
+    <country>
+        <name>Inde</name>
+        <capital>New Delhi</capital>
+        <area>3287263</area>
+        <population>1352617328</population>
+        <currency>Roupie indienne</currency>
+        <language>Hindi</language>
+        <flag>🇮🇳</flag>
+    </country>
+    <country>
+        <name>Australie</name>
+        <capital>Canberra</capital>
+        <area>7692024</area>
+        <population>24982688</population>
+        <currency>Dollar australien</currency>
+        <language>Anglais</language>
+        <flag>🇦🇺</flag>
+    </country>
+    <country>
+        <name>Nouvelle Zélande</name>
+        <capital>Wellington</capital>
+        <area>270467</area>
+        <population>4841000</population>
+        <currency>Dollar néo-zélandais</currency>
+        <language>Anglais</language>
+        <flag>🇳🇿</flag>
+    </country>
+    <country>
+        <name>Brésil</name>
+        <capital>Brasilia</capital>
+        <area>8515767</area>
+        <population>209288278</population>
+        <currency>Réal</currency>
+        <language>Portugais</language>
+        <flag>🇧🇷</flag>
+    </country>
+    <country>
+        <name>Argentine</name>
+        <capital>Buenos Aires</capital>
+        <area>2780400</area>
+        <population>44271041</population>
+        <currency>Peso argentin</currency>
+        <language>Espagnol</language>
+        <flag>🇦🇷</flag>
+    </country>
+    <country>
+        <name>Venezuela</name>
+        <capital>Caracas</capital>
+        <area>916445</area>
+        <population>28887118</population>
+        <currency>Bolivar</currency>
+        <language>Espagnol</language>
+        <flag>🇻🇪</flag>
+    </country>
+    <country>
+        <name>Colombie</name>
+        <capital>Bogota</capital>
+        <area>1141748</area>
+        <population>49648685</population>
+        <currency>Peso colombien</currency>
+        <language>Espagnol</language>
+        <flag>🇨🇴</flag>
+    </country>
+    <country>
+        <name>Maroc</name>
+        <capital>Rabat</capital>
+        <area>446550</area>
+        <population>36029138</population>
+        <currency>Dirham</currency>
+        <language>Arabe</language>
+        <flag>🇲🇦</flag>
+    </country>
+    <country>
+        <name>Algérie</name>
+        <capital>Alger</capital>
+        <area>2381741</area>
+        <population>42228429</population>
+        <currency>Dinar algérien</currency>
+        <language>Arabe</language>
+        <flag>🇩🇿</flag>
+    </country>
+    <country>
+        <name>Tunisie</name>
+        <capital>Tunis</capital>
+        <area>163610</area>
+        <population>11565204</population>
+        <currency>Dinar tunisien</currency>
+        <language>Arabe</language>
+        <flag>🇹🇳</flag>
+    </country>
+    <country>
+        <name>Libye</name>
+        <capital>Tripoli</capital>
+        <area>1759540</area>
+        <population>6678567</population>
+        <currency>Dinar libyen</currency>
+        <language>Arabe</language>
+        <flag>🇱🇾</flag>
+    </country>
+    <country>
+        <name>Egypte</name>
+        <capital>Le Caire</capital>
+        <area>1002450</area>
+        <population>98423595</population>
+        <currency>Livre égyptienne</currency>
+        <language>Arabe</language>
+        <flag>🇪🇬</flag>
     </country>
 </resources>

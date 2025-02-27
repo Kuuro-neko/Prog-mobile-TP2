@@ -1,5 +1,13 @@
 package com.example.prog_mobile_tp2;
 
+import android.content.res.XmlResourceParser;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class Country {
     private String name;
     private String capital;
@@ -65,5 +73,109 @@ public class Country {
         this.flag = flag;
     }
 
+
+    public static Country getCountryByName(XmlResourceParser parser, String countryName) {
+        try {
+            int eventType = parser.getEventType();
+            Country country = null;
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                String tagName = parser.getName();
+                switch (eventType) {
+                    case XmlPullParser.START_TAG:
+                        if ("country".equals(tagName)) {
+                            country = new Country();
+                        } else if (country != null) {
+                            switch (tagName) {
+                                case "name":
+                                    country.setName(parser.nextText());
+                                    break;
+                                case "capital":
+                                    country.setCapital(parser.nextText());
+                                    break;
+                                case "area":
+                                    country.setArea(Integer.parseInt(parser.nextText()));
+                                    break;
+                                case "population":
+                                    country.setPopulation(Integer.parseInt(parser.nextText()));
+                                    break;
+                                case "currency":
+                                    country.setCurrency(parser.nextText());
+                                    break;
+                                case "language":
+                                    country.setLanguage(parser.nextText());
+                                    break;
+                                case "flag":
+                                    country.setFlag(parser.nextText());
+                                    break;
+                            }
+                        }
+                        break;
+                    case XmlPullParser.END_TAG:
+                        if ("country".equals(tagName) && country != null && country.getName().equals(countryName)) {
+                            return country;
+                        }
+                        break;
+                }
+                eventType = parser.next();
+            }
+        } catch (XmlPullParserException | IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static ArrayList<Country> readData(XmlResourceParser parser) {
+        ArrayList<Country> countries = new ArrayList<>();
+        try {
+            int eventType = parser.getEventType();
+            Country country = null;
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                String tagName = parser.getName();
+                switch (eventType) {
+                    case XmlPullParser.START_TAG:
+                        if ("country".equals(tagName)) {
+                            country = new Country();
+                        } else if (country != null) {
+                            switch (tagName) {
+                                case "name":
+                                    country.setName(parser.nextText());
+                                    break;
+                                case "capital":
+                                    country.setCapital(parser.nextText());
+                                    break;
+                                case "area":
+                                    country.setArea(Integer.parseInt(parser.nextText()));
+                                    break;
+                                case "population":
+                                    country.setPopulation(Integer.parseInt(parser.nextText()));
+                                    break;
+                                case "currency":
+                                    country.setCurrency(parser.nextText());
+                                    break;
+                                case "language":
+                                    country.setLanguage(parser.nextText());
+                                    break;
+                                case "flag":
+                                    country.setFlag(parser.nextText());
+                                    break;
+                            }
+                        }
+                        break;
+                    case XmlPullParser.END_TAG:
+                        if ("country".equals(tagName) && country != null) {
+                            countries.add(country);
+                        }
+                        break;
+                }
+                eventType = parser.next();
+            }
+        } catch (XmlPullParserException | IOException e) {
+            e.printStackTrace();
+        }
+        for (Country country : countries) {
+            System.out.println(country.getName());
+        }
+        return countries;
+    }
 
 }

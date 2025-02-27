@@ -1,6 +1,7 @@
 package com.example.prog_mobile_tp2;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -21,6 +22,9 @@ public class CountryDetailActivity extends MenuActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button returnButton = findViewById(R.id.return_button);
+        returnButton.setOnClickListener(v -> finish());
 
         // Get the country from the intent's extra
         String countryName = getIntent().getStringExtra("country");
